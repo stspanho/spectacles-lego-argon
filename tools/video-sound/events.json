@@ -1,0 +1,14 @@
+[
+ {"t": 0.20, "kind": "shutter"},
+ {"t": 0.75, "kind": "reveal"},
+ {"t": 2.92, "kind": "place"},
+ {"t": 6.50, "kind": "next"},
+ {"t": 16.68, "kind": "pop"},
+ {"t": 19.55, "kind": "next"},
+ {"t": 26.65, "kind": "next"},
+ {"t": 30.80, "kind": "next"},
+ {"t": 33.95, "kind": "next"},
+ {"t": 36.05, "kind": "click"},
+ {"t": 36.12, "kind": "finale"},
+ {"t": 40.55, "kind": "fade"}
+]

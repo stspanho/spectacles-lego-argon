@@ -1,0 +1,83 @@
+- !<AssetImportMetadata/2d28d581-f3f6-498b-a185-d34442e128e5>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 0cd97d8a-7856-4bc7-b0f8-ca5c8af83287
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 0cd97d8a-7856-4bc7-b0f8-ca5c8af83287
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 1cd5f685-3b70-4ee0-b4c8-f2abaedec6ad
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/1cd5f685-3b70-4ee0-b4c8-f2abaedec6ad>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: fdbc976b-f8c5-409b-9148-6445e625e4fb
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    accessToken: false
+    apiBase: false
+    cameraModule: false
+    dustMaterial: false
+    editorApiBase: false
+    editorSim: false
+    editorStepSeconds: false
+    fingerHeight: false
+    handsAwaySeconds: false
+    holoMaterial: false
+    surfaceDrop: false
+    theme: false
+    thinking: false
+    worldCamera: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - cameraModule: !<reference.CameraModule> 00000000-0000-0000-0000-000000000000
+      worldCamera: !<reference.Camera> 00000000-0000-0000-0000-000000000000
+      holoMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      dustMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      apiBase: "http://localhost:8797"
+      accessToken: ""
+      editorApiBase: "http://127.0.0.1:8798"
+      theme: ""
+      thinking: MEDIUM
+      handsAwaySeconds: 1.500000
+      surfaceDrop: !<float> 1.000000
+      fingerHeight: true
+      editorSim: true
+      editorStepSeconds: !<float> 5.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input Asset.CameraModule cameraModule {"hint":"Camera Module asset. The @input binding is what declares the Camera capability on device."}'
+    - '// @input Component.Camera worldCamera {"hint":"The device-tracked Camera (Camera Object)."}'
+    - '// @input Asset.Material holoMaterial {"hint":"Assets/Shaders/BrickHolo.mat"}'
+    - '// @input Asset.Material dustMaterial {"hint":"Assets/Shaders/BrickDust.mat"}'
+    - '// @input string apiBase = "https://rev-contain-outer-orbit.trycloudflare.com" {"hint":"Backend base URL, e.g. https://xxx.trycloudflare.com"}'
+    - '// @input string accessToken {"hint":"ACCESS_TOKEN from the backend .env (device / tunnel only)"}'
+    - '// @input string editorApiBase = "http://127.0.0.1:8798" {"hint":"Editor only: a local token-less backend instance (HOST=127.0.0.1 ACCESS_TOKEN= PORT=8798). Empty = use apiBase."}'
+    - "// @input string theme {\"hint\":\"Optional theme for the design, e.g. 'a robot'\"}"
+    - '// @input string thinking = "MEDIUM" {"widget":"combobox", "values":[{"label":"LOW", "value":"LOW"}, {"label":"MEDIUM", "value":"MEDIUM"}, {"label":"HIGH", "value":"HIGH"}]}'
+    - '// @input float handsAwaySeconds {"hint":"0 = off. Otherwise: seconds both hands must stay away from the build before the step counts as done (besides NEXT)"}'
+    - "// @input float surfaceDrop = 1 {\"hint\":\"cm to lower the hand-calibrated plane (SurfacePlacement's estimate floats ~1 cm above the table). Negative raises it.\"}"
+    - '// @input bool fingerHeight {"hint":"Experimental: table height from the lowest tracked fingertip near the calibration point instead of the fixed drop (sank the area on device when the other hand hung lower)"}'
+    - '// @input bool editorSim = true {"hint":"Editor only: plant the table in front of the camera and advance steps on a timer"}'
+    - '// @input float editorStepSeconds = 5 {"hint":"Editor only: seconds per build step"}'
